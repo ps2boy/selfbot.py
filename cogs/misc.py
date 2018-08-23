@@ -154,7 +154,16 @@ class Misc:
         self.bot = bot
         self.emoji_converter = commands.EmojiConverter()
         self.nsp=NumericStringParserForPython3()
-        
+         
+    @commands.command()
+    async def ryle(self, ctx, *, message):
+        '''Quick command to embed messages quickly.'''
+        await ctx.message.delete()
+        em = discord.Embed(color=random.randint(0, 0xFFFFFF))
+        em.description = message
+        ex = "```"
+        await ctx.send(ex+message+ex)
+
     @commands.command()
     async def gif(self, ctx, *, tag):
         ''' Get a random gif. Usage: gif <tag> 
