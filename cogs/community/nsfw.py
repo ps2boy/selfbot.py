@@ -46,7 +46,7 @@ class Nsfw:
             return False
         return True
 
-    @commands.group(invoke_without_command=True)
+    @commands.group(invoke_without_command=false)
     async def nsfw(self, ctx):
         """ Get random lewds from the web """
         pass
